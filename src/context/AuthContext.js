@@ -33,7 +33,7 @@ const signout = (dispatch) => {
     return () => {
         /*
         Signout;
-        update the state correspondingly;
+        update the state accordingly;
         catch errors if found any.
         */
     };
