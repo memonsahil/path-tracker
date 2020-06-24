@@ -1,4 +1,4 @@
-import { createDataContext } from './createDataContext';
+import createDataContext from './createDataContext';
 
 const authReducer = (state, action) => {
     switch(action.type) {
@@ -7,7 +7,7 @@ const authReducer = (state, action) => {
     }
 };
 
-//Actions functions
+//Action functions
 
 const signup = (dispatch) => {
     return ({ email, password }) => {
