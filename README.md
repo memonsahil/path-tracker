@@ -1,2 +1,2 @@
-# track
-Track app built using context in React Native.
+# tracks
+Tracks app built using context in React Native.
