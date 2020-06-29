@@ -2,12 +2,14 @@ import createDataContext from './createDataContext';
 import trackerApi from '../api/tracker';
 import { AsyncStorage } from 'react-native'; //Soon to be depreciated and superseded with react-native-async-storage, however that's not supported with Expo. 
 //AsynceStorage - used for storing small pieces of data on device.
+import { navigate } from '../navigationRef';
+
 const authReducer = (state, action) => {
     switch(action.type) {
         case 'add_error':
-            return { ...state, errorMessage: action.payload }; //Re-render the component with the updated state property , i.e. errorMessage.
+            return { ...state, errorMessage: action.payload }; //Re-render the component with the updated state property, i.e. errorMessage.
         case 'signup':
-            return {errorMessage: '', token: action.payload}; //NOT re-rendering but resetting the entire state object, thereby resetting the errorMessage property.
+            return {errorMessage: '', token: action.payload}; //NOT re-rendering but resetting the entire state object.
         default:
             return state;
     }
@@ -34,9 +36,10 @@ const signup = (dispatch) => async ({ email, password }) => {
         console.log(response.data);
         await AsyncStorage.setItem('token', response.data.token);
         dispatch({ type: 'signup', payload: response.data.token });
+        navigate('TrackList');
     } catch (err) {
         console.log(err.response.data);
-        dispatch({type: 'add_error', payload: 'Something went wrong with Sign Up'})
+        dispatch({type: 'add_error', payload: 'Something went wrong with Sign Up.'})
     }
 };
 
