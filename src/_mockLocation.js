@@ -7,9 +7,9 @@ as it has its own testing features.
 
 import * as Location from 'expo-location';
 /*
-Importing * as location since the location library
+Importing * as Location since the expo-location library
 exports multiple named functions which can be accessed
-with this single variable (location).
+with this single variable (Location).
 */
 
 const tenMetersWithDegrees = 0.0001;
@@ -23,8 +23,8 @@ const getLocation = increment => {
             accuracy: 5,
             altitudeAccuracy: 5,
             altitude: 5,
-            latitude: -122.0312186 + increment * tenMetersWithDegrees,
-            longitude: 37.33233141 + increment * tenMetersWithDegrees
+            latitude: 53.22273389222794 + increment * tenMetersWithDegrees, //Bangor - latitude & longitude.
+            longitude:  -4.132752800979557 + increment * tenMetersWithDegrees
         }
     };
 };
