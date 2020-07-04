@@ -1,5 +1,5 @@
 import '../_mockLocation';
-import React, { useContext } from 'react';
+import React, { useContext, useCallback } from 'react';
 import { StyleSheet } from 'react-native';
 import { Text } from 'react-native-elements';
 import { Context as LocationContext } from '../context/LocationContext'; 
@@ -10,7 +10,15 @@ import TrackForm from '../components/TrackForm';
 
 const TrackCreateScreen = ({ isFocused }) => {  //isFocused is a boolean.
     const { state, addLocation } = useContext(LocationContext);
-    const [err] = useLocation(isFocused, (location) => { addLocation(location, state.recording) });
+    /*
+    useCallback limits the number of new instances
+    of the callback within to be produced based on
+    the value of state.recording, i.e. it produces
+    a new instance of the callback within only when
+    the value of state.recording changes.
+    */
+    const callback = useCallback((location) => addLocation(location, state.recording), [state.recording]);
+    const [err] = useLocation(isFocused, callback);
 
     //console.log(isFocused); returns true when this component is in focus and vice versa.
     

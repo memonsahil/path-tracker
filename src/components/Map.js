@@ -18,20 +18,18 @@ const Map = () => {
                 latitudeDelta: 0.01,
                 longitudeDelta: 0.01
             }}
-            /*
             region = {{ //To center the map on the moving location.
                 ...currentLocation.coords,
                 latitudeDelta: 0.01,
                 longitudeDelta: 0.01
             }}
-            */
         >
-        <Circle 
-            center = {currentLocation.coords}
-            radius = {25}
-            strokeColor = 'rgba(158, 158, 255, 1.0)' //RGB and Opacity.
-            fillColor = 'rgba(158, 158, 255, 0.3)'
-        />
+            <Circle 
+                center = {currentLocation.coords}
+                radius = {25}
+                strokeColor = 'rgba(158, 158, 255, 1.0)' //RGB and Opacity.
+                fillColor = 'rgba(158, 158, 255, 0.3)'
+            />
         </MapView>
     );
 };
