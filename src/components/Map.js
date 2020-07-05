@@ -34,7 +34,9 @@ const Map = () => {
                 coordinates = {locations.map((loc) => loc.coords)}
                 /*
                 Mapping the locations array to just access
-                the coords property of every location object.
+                the coords property of every location object
+                which contains the latitude and longitude
+                values within.
                 */
             />
         </MapView>

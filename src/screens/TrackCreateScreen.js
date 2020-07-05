@@ -7,15 +7,16 @@ import { SafeAreaView, withNavigationFocus } from 'react-navigation';
 import Map from '../components/Map';
 import useLocation from '../hooks/useLocation';
 import TrackForm from '../components/TrackForm';
+import { FontAwesome } from '@expo/vector-icons'; 
 
 const TrackCreateScreen = ({ isFocused }) => {  //isFocused is a boolean.
     const { state: { recording }, addLocation } = useContext(LocationContext);
     /*
     useCallback limits the number of new instances
     of the callback within to be produced based on
-    the value of state.recording, i.e. it produces
+    the value of recording, i.e. it produces
     a new instance of the callback within only when
-    the value of state.recording changes.
+    the value of recording changes.
     */
     const callback = useCallback((location) => addLocation(location, recording), [recording]);
     const [err] = useLocation(isFocused || recording, callback);
@@ -31,6 +32,11 @@ const TrackCreateScreen = ({ isFocused }) => {  //isFocused is a boolean.
             <TrackForm />    
         </SafeAreaView>
     );
+};
+
+TrackCreateScreen.navigationOptions = {
+    title: 'Add Track',
+    tabBarIcon: <FontAwesome name = 'plus' size = {20} />
 };
 
 const styles = StyleSheet.create({});

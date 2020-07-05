@@ -59,6 +59,6 @@ export default (shouldTrack, callback) => {
             }
         };
     }, [shouldTrack, callback, subscriber]); //Also startWatching when the value of the callback changes.
-    //All essential variables that dictacte startWatching should be stored within the dependency array.
+    //All essential variables that influence startWatching should be stored within the dependency array.
     return [err]; //Returning as an array by following community convention.
 };
