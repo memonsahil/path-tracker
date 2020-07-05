@@ -1,4 +1,4 @@
-import '../_mockLocation';
+//import '../_mockLocation';
 import React, { useContext, useCallback } from 'react';
 import { StyleSheet } from 'react-native';
 import { Text } from 'react-native-elements';
@@ -11,6 +11,7 @@ import { FontAwesome } from '@expo/vector-icons';
 
 const TrackCreateScreen = ({ isFocused }) => {  //isFocused is a boolean.
     const { state: { recording }, addLocation } = useContext(LocationContext);
+    
     /*
     useCallback limits the number of new instances
     of the callback within to be produced based on
@@ -18,6 +19,7 @@ const TrackCreateScreen = ({ isFocused }) => {  //isFocused is a boolean.
     a new instance of the callback within only when
     the value of recording changes.
     */
+    
     const callback = useCallback((location) => addLocation(location, recording), [recording]);
     const [err] = useLocation(isFocused || recording, callback);
     //When isfocused or recording is true, keep watching within useLocation.
