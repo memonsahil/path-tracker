@@ -3,9 +3,9 @@ import { requestPermissionsAsync, watchPositionAsync, Accuracy } from 'expo-loca
 
 export default (shouldTrack, callback) => {
     const [err, setErr] = useState(null);
+    let subscriber; //Listener for watchPositionAsync.
 
     useEffect(() => {
-        let subscriber; //Listener for watchPositionAsync.
         /*
         Helper function to get the permission and
         watch the changing position which is being
@@ -59,6 +59,6 @@ export default (shouldTrack, callback) => {
             }
         };
     }, [shouldTrack, callback, subscriber]); //Also startWatching when the value of the callback changes.
-
+    //All essential variables that dictacte startWatching should be stored within the dependency array.
     return [err]; //Returning as an array by following community convention.
 };

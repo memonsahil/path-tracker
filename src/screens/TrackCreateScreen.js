@@ -9,7 +9,7 @@ import useLocation from '../hooks/useLocation';
 import TrackForm from '../components/TrackForm';
 
 const TrackCreateScreen = ({ isFocused }) => {  //isFocused is a boolean.
-    const { state, addLocation } = useContext(LocationContext);
+    const { state: { recording }, addLocation } = useContext(LocationContext);
     /*
     useCallback limits the number of new instances
     of the callback within to be produced based on
@@ -17,8 +17,9 @@ const TrackCreateScreen = ({ isFocused }) => {  //isFocused is a boolean.
     a new instance of the callback within only when
     the value of state.recording changes.
     */
-    const callback = useCallback((location) => addLocation(location, state.recording), [state.recording]);
-    const [err] = useLocation(isFocused, callback);
+    const callback = useCallback((location) => addLocation(location, recording), [recording]);
+    const [err] = useLocation(isFocused || recording, callback);
+    //When isfocused or recording is true, keep watching within useLocation.
 
     //console.log(isFocused); returns true when this component is in focus and vice versa.
     
