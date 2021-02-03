@@ -6,19 +6,21 @@ A location tracking app that allows users to save their tracked paths. Developed
 
 Install [Expo](https://expo.io/) using [NPM](https://www.npmjs.com/get-npm):
 
-```console
-$npm install -g expo-cli
-```
+````
+$ npm install -g expo-cli
+````
 
 Install the project:
 
-```console
-#install all dependencies
-$cd path-tracker && npm install
+````
+$ cd path-tracker && npm install
+````
 
-#start the project
-$expo start
-```
+Start the project:
+
+````
+$ expo start
+````
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first.
