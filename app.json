@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Tracks",
-    "slug": "tracks",
+    "name": "PathTracker",
+    "slug": "path-tracker",
     "platforms": [
       "ios",
       "android",

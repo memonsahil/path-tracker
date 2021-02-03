@@ -14,7 +14,7 @@ const SigninScreen = () => {
         onWillFocus={clearErrorMessage} //All its props - onWillFocus, onDidFocus, onWilBlur, onDidBlur.
       />
       <AuthForm
-        headerText="Sign In for Tracker"
+        headerText="Sign In for PathTracker"
         errorMessage={state.errorMessage}
         submitButtonText="Sign In"
         onSubmit={signin}

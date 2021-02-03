@@ -14,7 +14,7 @@ const SignupScreen = () => {
         onWillFocus={clearErrorMessage} //All its props - onWillFocus, onDidFocus, onWilBlur, onDidBlur.
       />
       <AuthForm
-        headerText="Sign Up for Tracker"
+        headerText="Sign Up for PathTracker"
         errorMessage={state.errorMessage}
         submitButtonText="Sign Up"
         onSubmit={signup} //Same as onSubmit = {({ email, password }) => signup({ email, password })} Automatically passes the appropriate arguments.
