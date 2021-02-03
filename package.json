@@ -8,9 +8,11 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.12.1",
     "@react-native-community/masked-view": "^0.1.6",
     "axios": "^0.21.1",
     "expo": "~37.0.3",
+    "expo-cli": "^4.1.6",
     "expo-location": "~8.1.0",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",

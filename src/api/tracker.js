@@ -1,5 +1,5 @@
 import axios from "axios";
-import { AsyncStorage } from "react-native";
+import AsyncStorage from "@react-native-community/async-storage";
 
 //Using ngrok, hence the baseURL changes every 8 hours.
 const instance = axios.create({
