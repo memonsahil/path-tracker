@@ -1,6 +1,6 @@
 # path-tracker
 
-A location tracking app that enables users to save their tracked paths. Created with [React Native](https://reactnative.dev/) using its [Context API](https://reactjs.org/docs/context.html).
+A location tracking app that allows users to save their tracked paths. Developed with [React Native](https://reactnative.dev/) using its [Context API](https://reactjs.org/docs/context.html).
 
 ## Installation
 
