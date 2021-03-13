@@ -1,8 +1,8 @@
 # path-tracker
-A location tracking app that allows users to save their tracked paths. Developed with [React Native](https://reactnative.dev/) using its [Context API](https://reactjs.org/docs/context.html).
+A location tracking app that allows users to save their tracked paths, developed with [React Native](https://reactnative.dev/) using its [Context API](https://reactjs.org/docs/context.html).
 
-## Installation
-Install [Expo](https://expo.io/) using [NPM](https://www.npmjs.com/get-npm):
+## Setup
+Install [Expo](https://expo.io/) using [npm](https://www.npmjs.com/get-npm):
 ````
 $ npm install -g expo-cli
 ````
