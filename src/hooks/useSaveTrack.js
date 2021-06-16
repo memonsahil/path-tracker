@@ -12,8 +12,9 @@ export default () => {
 
   const saveTrack = async () => {
     await createTrack(name, locations);
-    reset(); //To reset the form after saving is successful.
+    reset(); // Reset the form after saving the track.
     navigate("TrackList");
   };
+
   return [saveTrack];
 };
