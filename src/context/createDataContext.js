@@ -1,6 +1,3 @@
-//Context helps pass values to any nested component within the { children } object.
-//File name starts with lowercase since it's exporting a plain function.
-
 import React, { useReducer } from "react";
 
 export default (reducer, actions, defaultValue) => {
@@ -14,7 +11,6 @@ export default (reducer, actions, defaultValue) => {
       boundActions[key] = actions[key](dispatch);
     }
 
-    //value to be accessed with useContext.
     return (
       <Context.Provider value={{ state, ...boundActions }}>
         {children}
