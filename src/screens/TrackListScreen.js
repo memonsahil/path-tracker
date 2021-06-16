@@ -1,14 +1,11 @@
 import React, { useContext } from "react";
-import { Text, StyleSheet, FlatList, TouchableOpacity } from "react-native";
+import { FlatList, TouchableOpacity } from "react-native";
 import { ListItem } from "react-native-elements";
 import { NavigationEvents } from "react-navigation";
 import { Context as TrackContext } from "../context/TrackContext";
-import { navigate } from "../navigationRef";
 
 const TrackListScreen = ({ navigation }) => {
   const { state, fetchTracks } = useContext(TrackContext);
-
-  //console.log(state);
 
   return (
     <>
@@ -35,7 +32,5 @@ const TrackListScreen = ({ navigation }) => {
 TrackListScreen.navigationOptions = {
   title: "Tracks",
 };
-
-const styles = StyleSheet.create({});
 
 export default TrackListScreen;

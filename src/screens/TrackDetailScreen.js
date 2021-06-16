@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { Text } from "react-native";
 import { Context as TrackContext } from "../context/TrackContext";
 import MapView, { Polyline } from "react-native-maps";
-import TrackListScreen from "./TrackListScreen";
 
 const TrackDetailScreen = ({ navigation }) => {
   const { state } = useContext(TrackContext);
@@ -10,7 +9,6 @@ const TrackDetailScreen = ({ navigation }) => {
 
   const track = state.find((t) => t._id === _id);
   const initialCoords = track.locations[0].coords;
-  //Accessing the coords property of the first location object within locations[].
 
   return (
     <>
@@ -32,7 +30,5 @@ const TrackDetailScreen = ({ navigation }) => {
 TrackDetailScreen.navigationOptions = {
   title: "Details",
 };
-
-const styles = StyleSheet.create({});
 
 export default TrackDetailScreen;
