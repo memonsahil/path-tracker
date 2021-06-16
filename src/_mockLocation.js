@@ -1,18 +1,12 @@
-/*
-For creating a fake location path from the user.
-For Testing purposes only - on Expo app.
-Not really necessary when testing on a simulator / emulator,
-as it has its own testing features.
-*/
-
 import * as Location from "expo-location";
+
 /*
-Importing * as Location since the expo-location library
-exports multiple named functions which can be accessed
-with this single variable (Location).
+Creating a fake location path for the user for testing within Expo Go. Not necessary when
+testing on a simulator or emulator, as they have their own location testing features.
 */
 
 const tenMetersWithDegrees = 0.0001;
+let counter = 0;
 
 const getLocation = (increment) => {
   return {
@@ -23,18 +17,16 @@ const getLocation = (increment) => {
       accuracy: 5,
       altitudeAccuracy: 5,
       altitude: 5,
-      latitude: 53.22273389222794 + increment * tenMetersWithDegrees, //Bangor - latitude & longitude.
-      longitude: -4.132752800979557 + increment * tenMetersWithDegrees,
+      latitude: 55.8642 + increment * tenMetersWithDegrees, // Glasgow
+      longitude: -4.2518 + increment * tenMetersWithDegrees,
     },
   };
 };
 
-let counter = 0;
 setInterval(() => {
-  //New location is emitted every second.
   Location.EventEmitter.emit("Expo.locationChanged", {
     watchId: Location._getCurrentWatchId(),
     location: getLocation(counter),
   });
   counter++;
-}, 1000); //1000ms equals 1s.
+}, 1000);
