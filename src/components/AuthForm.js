@@ -15,13 +15,13 @@ const AuthForm = ({ headerText, errorMessage, submitButtonText, onSubmit }) => {
       <Input
         label="Email"
         value={email}
-        onChangeText={setEmail} //same as onChange = {(newEmail) => setEmail(newEmail)}
+        onChangeText={setEmail}
         autoCapitalize="none"
         autoCorrect={false}
       />
       <Spacer />
       <Input
-        secureTextEntry //Same as secureTextEntry = {true}
+        secureTextEntry
         label="Password"
         value={password}
         onChangeText={setPassword}

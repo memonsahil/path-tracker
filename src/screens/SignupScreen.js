@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { View, StyleSheet } from "react-native";
-import { NavigationEvents } from "react-navigation"; //For handling events when a component is is focus or blur (not in focus).
+import { NavigationEvents } from "react-navigation";
 import { Context as AuthContext } from "../context/AuthContext";
 import AuthForm from "../components/AuthForm";
 import NavLink from "../components/NavLink";
@@ -10,14 +10,12 @@ const SignupScreen = () => {
 
   return (
     <View style={styles.container}>
-      <NavigationEvents //Removes the error message when about to focus on this SignupScreen component, i.e. when the transition is initiated.
-        onWillFocus={clearErrorMessage} //All its props - onWillFocus, onDidFocus, onWilBlur, onDidBlur.
-      />
+      <NavigationEvents onWillFocus={clearErrorMessage} />
       <AuthForm
-        headerText="Sign Up for PathTracker"
+        headerText="Sign Up for Path Tracker"
         errorMessage={state.errorMessage}
         submitButtonText="Sign Up"
-        onSubmit={signup} //Same as onSubmit = {({ email, password }) => signup({ email, password })} Automatically passes the appropriate arguments.
+        onSubmit={signup}
       />
       <NavLink
         text="Already have an account? Sign In instead."
@@ -35,8 +33,7 @@ SignupScreen.navigationOptions = () => {
 
 const styles = StyleSheet.create({
   container: {
-    //borderWidth: 8,
-    flex: 1, //To take up the available space.
+    flex: 1,
     justifyContent: "center",
     marginBottom: 250,
   },
