@@ -7,6 +7,7 @@ import Map from "../components/Map";
 import TrackForm from "../components/TrackForm";
 import useLocation from "../hooks/useLocation";
 //import '../_mockLocation';
+// Uncomment _mockLocation when running on Expo Go.
 
 const TrackCreateScreen = ({ isFocused }) => {
   const {

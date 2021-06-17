@@ -1,8 +1,8 @@
 import * as Location from "expo-location";
 
 /*
-Creating a fake location path for the user for testing within Expo Go. Not necessary when
-testing on a simulator or emulator, as they have their own location testing features.
+Creating a fake location path for the user when running on Expo Go. Not necessary when
+running on a simulator or emulator, as they have their own location testing features.
 */
 
 const tenMetersWithDegrees = 0.0001;
