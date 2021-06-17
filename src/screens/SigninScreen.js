@@ -12,7 +12,7 @@ const SigninScreen = () => {
     <View style={styles.container}>
       <NavigationEvents onWillFocus={clearErrorMessage} />
       <AuthForm
-        headerText="Sign In for Path Tracker"
+        headerText="Sign In for Location Tracking"
         errorMessage={state.errorMessage}
         submitButtonText="Sign In"
         onSubmit={signin}
