@@ -1,5 +1,3 @@
-//For general spacing and applying margin to any child components.
-
 import React from "react";
 import { View, StyleSheet } from "react-native";
 
