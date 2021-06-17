@@ -4,7 +4,7 @@
 ![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)
 
-An app that allows users to create an account and track their path on a map. Built using [React Native](https://reactnative.dev/) and [Expo](https://expo.io).
+An app that allows users to create an account and track their moving location on a map. Built using [React Native](https://reactnative.dev/) and [Expo](https://expo.io).
 
 ## Setup
 
