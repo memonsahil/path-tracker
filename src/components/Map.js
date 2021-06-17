@@ -16,33 +16,24 @@ const Map = () => {
     <MapView
       style={styles.map}
       initialRegion={{
-        //Delta values indicate the zoom level.
-        ...currentLocation.coords,
         latitudeDelta: 0.01,
         longitudeDelta: 0.01,
+        ...currentLocation.coords,
       }}
+      // To center the map on the moving location.
       region={{
-        //To center the map on the moving location.
-        ...currentLocation.coords,
         latitudeDelta: 0.01,
         longitudeDelta: 0.01,
+        ...currentLocation.coords,
       }}
     >
       <Circle
         center={currentLocation.coords}
         radius={25}
-        strokeColor="rgba(158, 158, 255, 1.0)" //RGB and Opacity.
+        strokeColor="rgba(158, 158, 255, 1.0)"
         fillColor="rgba(158, 158, 255, 0.3)"
       />
-      <Polyline
-        coordinates={locations.map((loc) => loc.coords)}
-        /*
-                Mapping the locations array to just access
-                the coords property of every location object
-                which contains the latitude and longitude
-                values within.
-                */
-      />
+      <Polyline coordinates={locations.map((loc) => loc.coords)} />
     </MapView>
   );
 };

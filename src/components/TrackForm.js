@@ -11,9 +11,8 @@ const TrackForm = () => {
     stopRecording,
     changeName,
   } = useContext(LocationContext);
-  const [SaveTrack] = useSaveTrack();
 
-  //console.log(locations.length);
+  const [SaveTrack] = useSaveTrack();
 
   return (
     <>
@@ -37,10 +36,6 @@ const TrackForm = () => {
         ) : null}
       </Spacer>
     </>
-    /*
-        When not recording and some number of location objects exist
-        within the locations array, then show the save Button. 
-        */
   );
 };
 
