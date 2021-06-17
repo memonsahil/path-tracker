@@ -53,6 +53,5 @@ export default (shouldTrack, callback) => {
     };
   }, [shouldTrack, callback, subscriber]);
 
-  // Returning as an array, thereby following community convention.
   return [err];
 };
