@@ -18,10 +18,10 @@ export default (shouldTrack, callback) => {
         /*
         After the intial permission request, the OS handles future requests accordingly.
 
-        If location permission is granted, then the map component with receive both,
-        the device's current location and the incoming points from _mockLocation.
+        If location permission is granted, then the map component with receive the device's
+        current location.
         
-        If location permission is not granted, then the map component will only use the
+        If location permission is not granted, then the map component should use the
         incoming points from _mockLocation.
         */
 

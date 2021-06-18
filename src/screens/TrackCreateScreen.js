@@ -7,7 +7,7 @@ import Map from "../components/Map";
 import TrackForm from "../components/TrackForm";
 import useLocation from "../hooks/useLocation";
 //import '../_mockLocation';
-// Uncomment _mockLocation when running on Expo Go.
+// Uncomment _mockLocation when running on Expo Go without location services.
 
 const TrackCreateScreen = ({ isFocused }) => {
   const {
@@ -27,7 +27,7 @@ const TrackCreateScreen = ({ isFocused }) => {
     <SafeAreaView forceInset={{ top: "always" }}>
       <Text h2>Create a Track</Text>
       <Map />
-      {err ? <Text>Please enable location services.</Text> : null}
+      {err ? <Text style={{marginTop: 30, marginLeft: 20}}>Please enable location services.</Text> : null}
       <TrackForm />
     </SafeAreaView>
   );
