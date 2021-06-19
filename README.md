@@ -14,7 +14,9 @@ An app that allows users to create an account and track their moving location on
 $ cd location-tracking && npm install
 ```
 
-2. Start the project using expo:
+2. Connect the app to its database by launching the [location-tracking-server](https://github.com/memonsahil/location-tracking-server) project and completing its setup. Upon completing this step, the app will connect to its database on launch.
+
+3. Start the project using expo:
 
 ```
 $ expo start
